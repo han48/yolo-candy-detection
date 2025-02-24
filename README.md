@@ -29,5 +29,5 @@ unzip data.zip -d custom_data
 python train_val_split.py --datapath=custom_data --train_pct=0.9
 python create_yaml.py
 yolo detect train data=data.yaml model=yolo11s.pt epochs=60 imgsz=640
-yolo detect predict model=runs/detect/train/weights/best.pt source=data/validation/images save=True
+yolo detect predict model=runs/detect/train/weights/best.pt source=../datasets/data/validation/images save=True
 ```
